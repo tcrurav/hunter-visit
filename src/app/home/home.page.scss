@@ -2,3 +2,33 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+ion-button {
+  margin: 1em;
+}
+
+.img-parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.img-background {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.img-star {
+  position: absolute;
+  top: .5em;
+  left: .5em;
+  color: yellow;
+  font-size: 2em;
+}
+
+$flag-icon-css-path: '~flag-icon-css/flags' !default;
+@import "~flag-icon-css/sass/flag-icon";
+
+// $image_path: '~material-design-lite/src/images' !default;
+// @import "~material-design-lite/src/material-design-lite";

@@ -1,0 +1,37 @@
+#map-canvas {
+    height: 60%;
+}
+
+.answer-success {
+    color: green;
+    // --border-color: green;
+    // --highlight-color-focused: green;
+}
+
+.answer-fail {
+    color: red;
+    // --border-color: red;
+    // --highlight-color-focused: red;
+}
+
+ion-item {
+    --highlight-color-focused: black;
+}
+
+// .line-input {
+//     // margin: .25rem 1rem !important;
+//     ion-item {
+//         --border-color: transparent !important;
+//         --highlight-height: 0;
+//         border: 1px solid #c52828;
+//         border-radius: 8px;
+//         & .item-has-focus {
+//             border: 1px solid var(--ion-color-primary);
+//         }
+//         ion-label {
+//             color: #807e7e !important;
+//             font-weight: 300;
+//             font-size: 1rem !important;
+//         }
+//     }
+// }

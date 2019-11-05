@@ -29,3 +29,8 @@ npm-debug.log*
 /platforms
 /plugins
 /www
+
+readme-installation.txt
+hunter-visit.keystore
+config.xml
+/images-to-discard

@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>My answers</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button *ngIf="countNotHunts!=0">
+        <ion-badge color="danger">{{countNotHunts}}</ion-badge>
+        <ion-icon name="thumbs-down" color="danger"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="countNotHunts==0">
+          <ion-badge color="success">{{countHunts}}</ion-badge>
+          <ion-icon name="thumbs-up" color="success"></ion-icon>
+        </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="refresh"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <!-- *ngIf="countNotHunts != 0" -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="map-canvas">
+    <!-- <button ion-button (click)="onButtonClick($event)">Start Demo</button> -->
+  </div>
+
+  <ion-list class="line-input">
+    <ion-item *ngFor="let station of visit.stations; let i = index">
+      <ion-label position="stacked">Station {{i}}</ion-label>
+      <ion-input (ionChange)="checkAnswers()" [(ngModel)]="userAnswers[i].value" placeholder="your answer..."
+        [ngClass]="{'answer-success': userAnswers[i].icon === 'checkmark', 'answer-fail': userAnswers[i].icon === 'close'}">
+      </ion-input>
+      <ion-icon name="{{userAnswers[i].icon}}" slot="end"
+        [ngClass]="{'answer-success': userAnswers[i].icon === 'checkmark', 'answer-fail': userAnswers[i].icon === 'close'}"
+        size="large"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" shape="round" (click)="checkAnswers()">Check location</ion-button>
+
+  <!-- <ion-grid>
+    <ion-row *ngFor="let station of visit.stations; let i = index">
+      <ion-col class="ion-text-right" size="4">
+        Station {{i}}:
+      </ion-col>
+      <ion-col size="8" class="line-input">
+        <ion-item>
+          <ion-input [(ngModel)]="userAnswers[i]" placeholder="your answer..."></ion-input>
+          <ion-icon name="checkmark-circle" slot="end"></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+  <!-- <ion-list class="line-input">
+    <ion-item *ngFor="let station of visit.stations; let i = index">
+      <ion-label>
+        Station {{i}}
+      </ion-label>
+      <ion-input class="ion-text-right" [(ngModel)]="userAnswers[i]" placeholder="Station {{i}}"></ion-input>
+    </ion-item>
+  </ion-list> -->
+</ion-content>

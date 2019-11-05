@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Arucas",
+        "description": "The municipality is located in the north of the island of Gran Canaria, at a distance of 17 kilometers from the island capital. It borders the municipalities of Moya, Firgas, Teror, and Las Palmas de Gran Canaria.",
+        "stations": [
+            {
+                "question": "The church of Arucas was built imitating an architectural style prior to the time of its construction. What architectural style are we talking about?",
+                "answer": "Neo-gothic",
+                "geolocation": {
+                    "lat": 28.118692299999992,
+                    "lng": -15.523169999999936
+                },
+                "photos": [
+                    {
+                        "url": "arucas_1.jpg",
+                        "description": "Arucas Cathedral"
+                    },
+                    {
+                        "url": "arucas_2.jpg",
+                        "description": "Portico"
+                    }
+                ]
+            },
+            {
+                "question": "The beginnings of this factory date back to 1883. The sugar machinery came from Glasgow (Scotland). What's the name of the famous rum brand?",
+                "answer": "Arehucas",
+                "geolocation": {
+                    "lat": 28.12,
+                    "lng": -15.53
+                },
+                "photos": [
+                    {
+                        "url": "arucas_5.jpg",
+                        "description": "Rum destillery"
+                    }
+                ]
+            },
+            {
+                "question": "The construction of the church has several accesses from its four sides. How many steps are there in total in all accesses?",
+                "answer": "23",
+                "geolocation": {
+                    "lat": 28.118692299999991,
+                    "lng": -15.52317
+                },
+                "photos": [
+                    {
+                        "url": "arucas_3.jpg",
+                        "description": "Steps of the central door"
+                    },
+                    {
+                        "url": "arucas_4.jpg",
+                        "description": "Side Door Steps"
+                    }
+                ]
+            }
+        ]
+    }
+]

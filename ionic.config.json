@@ -1,5 +1,7 @@
 {
   "name": "hunter-visit",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
