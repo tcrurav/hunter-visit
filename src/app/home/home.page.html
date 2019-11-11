@@ -10,16 +10,18 @@
 </ion-header>
 
 <ion-content>
+
   <ion-card class="welcome-card" *ngFor="let visit of visits; let i = index">
     <div class="img-parent">
       <img class="img-background" src="/assets/{{visit.stations[0].photos[0].url}}"
         alt="{{visit.stations[0].photos[0].description}}" />
       <div class="img-star">
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star-outline"></ion-icon>
-        <ion-icon name="star-outline"></ion-icon>
+        <span id="full-stars" (click)="removeStar()">
+          <ion-icon name="star" *ngFor="let i of [].constructor(stars)"></ion-icon>
+        </span>
+        <span id="empty-stars" (click)="addStar()">
+          <ion-icon name="star-outline" *ngFor="let i of [].constructor(5-stars)"></ion-icon>
+        </span>
       </div>
     </div>
     <ion-card-header>
@@ -29,9 +31,11 @@
       </ion-card-title>
     </ion-card-header>
     <ion-card-content>
-        <!-- class="ion-text-justify" -->
+      <!-- class="ion-text-justify" -->
       <p>{{visit.description}}</p>
-      <ion-button fill="outline" class="ion-float-right" size="small" (click)="startHunting(i)">Start hunting >></ion-button>
+      <ion-button fill="outline" class="ion-float-right" size="small" (click)="startHunting(i)">Start hunting >>
+      </ion-button>
     </ion-card-content>
   </ion-card>
+
 </ion-content>
