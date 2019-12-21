@@ -37,3 +37,4 @@ config.xml
 /images-to-discard
 *.report.html
 /src/environments/*
+/.firebase
