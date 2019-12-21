@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { GoogleMaps, GoogleMap, GoogleMapsEvent, GoogleMapsAnimation, MyLocation, Marker, BaseArrayClass, ILatLng } from '@ionic-native/google-maps/ngx';
+import { GoogleMaps, GoogleMap, GoogleMapsEvent, GoogleMapsAnimation, MyLocation, Marker, BaseArrayClass, ILatLng, Environment } from '@ionic-native/google-maps/ngx';
 import { Platform, LoadingController, ToastController } from '@ionic/angular';
 import { Visit } from '../models/visit';
 import { ApiService } from '../services/api.service';
 import { ElementRef } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-geolocation',
@@ -104,6 +105,13 @@ export class GeolocationPage implements OnInit {
   }
 
   async loadMapSetOfPoints() {
+
+    // The Environment only for browser
+    Environment.setEnv({
+      'API_KEY_FOR_BROWSER_RELEASE': environment.API_KEY_FOR_BROWSER_RELEASE,
+      'API_KEY_FOR_BROWSER_DEBUG': environment.API_KEY_FOR_BROWSER_RELEASE
+    });
+
     if (this.map) {
       this.map.clear().then(() => {
         this.reallyLoadMapSetOfPoints();
