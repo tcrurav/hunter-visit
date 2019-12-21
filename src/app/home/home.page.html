@@ -16,10 +16,10 @@
       <img class="img-background" src="/assets/{{visit.stations[0].photos[0].url}}"
         alt="{{visit.stations[0].photos[0].description}}" />
       <div class="img-star">
-        <span id="full-stars" (click)="removeStar()">
+        <span (click)="removeStar()" *ngIf="stars">
           <ion-icon name="star" *ngFor="let i of [].constructor(stars)"></ion-icon>
         </span>
-        <span id="empty-stars" (click)="addStar()">
+        <span (click)="addStar()">
           <ion-icon name="star-outline" *ngFor="let i of [].constructor(5-stars)"></ion-icon>
         </span>
       </div>
