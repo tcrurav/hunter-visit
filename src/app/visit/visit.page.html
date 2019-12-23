@@ -27,9 +27,17 @@
 
   <ion-card class="welcome-card" *ngFor="let station of visit.stations; let i = index">
     <ion-card-header>
-      <ion-card-subtitle style="float: right"><span class="flag-icon flag-icon-gb"></span></ion-card-subtitle>
+      <!-- <ion-card-subtitle class="my-subtitle">
+          <img class="my-cardboard" *ngIf="station.vr" src="assets/vr/img/cardboard.png" alt="cardboard" />
+        <span ng-click="launchVR()" class="flag-icon flag-icon-gb my-flag"></span>
+      </ion-card-subtitle> -->
       <ion-card-title>
-        <span>Station {{i}}</span>
+        <span class="station">Station {{i}}</span>
+        <div class="my-cardboard-container">
+          <ion-img (click)="launchVR()" class="my-cardboard" *ngIf="station.vr" src="assets/vr/img/cardboard.png"
+            alt="cardboard"></ion-img>
+          <span class="flag-icon flag-icon-gb my-flag"></span>
+        </div>
       </ion-card-title>
     </ion-card-header>
     <ion-card-content>

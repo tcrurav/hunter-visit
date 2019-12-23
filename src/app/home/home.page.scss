@@ -27,6 +27,15 @@ ion-button {
   font-size: 2em;
 }
 
+.my-subtitle {
+  float: right; 
+  font-size: 1.5em;
+}
+
+.my-flag {
+  vertical-align: top !important;
+}
+
 $flag-icon-css-path: '~flag-icon-css/flags' !default;
 @import "~flag-icon-css/sass/flag-icon";
 

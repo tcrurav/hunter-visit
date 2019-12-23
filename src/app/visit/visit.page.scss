@@ -23,9 +23,32 @@
     font-size: 1.5em;
   }
 
-  // ion-slides {
-  //   margin-top: 1em;
+  .my-cardboard-container {
+    // clear: both;
+    float: right;
+    // display: inline-block;
+  }
+
+  .station {
+    font-size: 1em;
+  }
+
+  .my-cardboard {
+    width: 1.5em !important;
+    height: auto;
+    margin-right: .5em;
+    display: inline-block;
+    vertical-align: middle !important;
+  }
+
+  // .my-subtitle {
+  //   float: right; 
+  //   font-size: 1.5em;
   // }
+
+  .my-flag {
+    vertical-align: middle !important;
+  }
   
   $flag-icon-css-path: '~flag-icon-css/flags' !default;
   @import "~flag-icon-css/sass/flag-icon";

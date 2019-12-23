@@ -36,4 +36,9 @@ export class VisitPage implements OnInit {
     this.router.navigateByUrl('/geolocation');
   }
 
+  launchVR(){
+    console.log("launchVR");
+    this.router.navigateByUrl('/show-vr');
+  }
+
 }

@@ -16,7 +16,8 @@ const routes: Routes = [
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
   },
   { path: 'visit', loadChildren: './visit/visit.module#VisitPageModule' },
-  { path: 'geolocation', loadChildren: './geolocation/geolocation.module#GeolocationPageModule' }
+  { path: 'geolocation', loadChildren: './geolocation/geolocation.module#GeolocationPageModule' },
+  { path: 'show-vr', loadChildren: './show-vr/show-vr.module#ShowVrPageModule' }
 ];
 
 @NgModule({

@@ -90,6 +90,12 @@ export class ApiService {
                   "url": "telde_1.jpg",
                   "description": "Church of San Juan"
                 }
+              ],
+              "vr": [
+                {
+                  "url": "telde_sanjuan_360.jpg",
+                  "text": "San Juan Bautista, Telde" 
+                }
               ]
             },
             {
