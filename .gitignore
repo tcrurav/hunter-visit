@@ -33,8 +33,7 @@ npm-debug.log*
 # My own lines
 readme-installation.txt
 hunter-visit.keystore
-config.xml
 /images-to-discard
 *.report.html
-/src/environments/*
 /.firebase
+/src/environments/*
