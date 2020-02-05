@@ -4,6 +4,9 @@ In march 2020 during 3 weeks about 10 students from Aalborg Techcollege (https:/
 
 This repo is just a draft project developped by the teachers envolved in the project to explore possibilities and forsee problems students could get stuck with.
 
+Here you can find a draft deploy of the project: (as mobile PWA only)
+https://huntervisit-5df0b.firebaseapp.com/home
+
 ## Getting Started
 
 Install a full ionic develop environment. And after that:
