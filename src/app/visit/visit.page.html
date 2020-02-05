@@ -11,8 +11,8 @@
 
   <ion-slides pager="true" [options]="slideOpts">
     <ion-slide *ngFor="let s of visit.stations" class="welcome-card">
-      <img class="img-background" src="/assets/{{s.photos[0].url}}" alt="s.photos[0].description" />
       <div class="img-parent">
+        <img class="img-background" src="/assets/{{s.photos[0].url}}" alt="s.photos[0].description" />
         <div class="img-star">
           <ion-icon name="star"></ion-icon>
           <ion-icon name="star"></ion-icon>
@@ -34,7 +34,7 @@
       <ion-card-title>
         <span class="station">Station {{i}}</span>
         <div class="my-cardboard-container">
-          <ion-img (click)="launchVR()" class="my-cardboard" *ngIf="station.vr" src="assets/vr/img/cardboard.png"
+          <ion-img (click)="launchVR(i)" class="my-cardboard" *ngIf="station.vrs[0]" src="assets/vr/img/cardboard.png"
             alt="cardboard"></ion-img>
           <span class="flag-icon flag-icon-gb my-flag"></span>
         </div>

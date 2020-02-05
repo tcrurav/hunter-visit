@@ -17,7 +17,8 @@ const routes: Routes = [
   },
   { path: 'visit', loadChildren: './visit/visit.module#VisitPageModule' },
   { path: 'geolocation', loadChildren: './geolocation/geolocation.module#GeolocationPageModule' },
-  { path: 'show-vr', loadChildren: './show-vr/show-vr.module#ShowVrPageModule' }
+  { path: 'show-vr', loadChildren: './show-vr/show-vr.module#ShowVrPageModule' },
+  { path: 'youtube', loadChildren: './youtube/youtube.module#YoutubePageModule' }
 ];
 
 @NgModule({

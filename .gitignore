@@ -36,4 +36,5 @@ hunter-visit.keystore
 /images-to-discard
 *.report.html
 /.firebase
-/src/environments/*
+/docs
+# /src/environments/*

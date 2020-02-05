@@ -1,12 +1,22 @@
-.welcome-card img {
-    width: 100%;
-    max-height: 30vh;
+.img-parent img {
+    width: 100vw;
+    max-height: 35vh;
     // overflow: hidden;
     object-fit: cover;
   }
   
   ion-button {
     margin: 1em;
+  }
+
+  ion-slide.wellcome-card {
+    width: 100%;
+  }
+
+  .img-parent {
+    position: relative;
+    top: 0;
+    left: 0;
   }
 
   .img-background {
@@ -40,11 +50,6 @@
     display: inline-block;
     vertical-align: middle !important;
   }
-
-  // .my-subtitle {
-  //   float: right; 
-  //   font-size: 1.5em;
-  // }
 
   .my-flag {
     vertical-align: middle !important;

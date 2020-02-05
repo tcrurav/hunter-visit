@@ -10,6 +10,7 @@ export class ApiService {
 
   visits: Array<Visit>;
   nowHuntingVisit: number = 0;
+  nowHuntingStation: number = 0;
 
   constructor() { }
 
@@ -23,6 +24,14 @@ export class ApiService {
 
   setNowHuntingVisit(idVisit: number) {
     this.nowHuntingVisit = idVisit;
+  }
+
+  getNowHuntingStation() {
+    return this.visits[this.nowHuntingVisit].stations[this.nowHuntingStation];
+  }
+
+  setNowHuntingStation(idStation: number) {
+    this.nowHuntingStation = idStation;
   }
 
   getAllVisits(): Observable<Array<Visit>> {
@@ -47,7 +56,8 @@ export class ApiService {
                   "url": "arucas_2.jpg",
                   "description": "Portico"
                 }
-              ]
+              ],
+              "vrs": []
             },
             {
               "question": "The beginnings of this factory date back to 1883. The sugar machinery came from Glasgow (Scotland). What's the name of the famous rum brand?",
@@ -58,7 +68,8 @@ export class ApiService {
                   "url": "arucas_5.jpg",
                   "description": "Rum destillery"
                 }
-              ]
+              ],
+              "vrs": []
             },
             {
               "question": "The construction of the church has several accesses from its four sides. How many steps are there in total in all accesses?",
@@ -73,7 +84,8 @@ export class ApiService {
                   "url": "arucas_4.jpg",
                   "description": "Side Door Steps"
                 }
-              ]
+              ],
+              "vrs": []
             }
           ]
         },
@@ -91,10 +103,16 @@ export class ApiService {
                   "description": "Church of San Juan"
                 }
               ],
-              "vr": [
+              "vrs": [
                 {
                   "url": "telde_sanjuan_360.jpg",
                   "text": "San Juan Bautista, Telde" 
+                }
+              ],
+              "videos": [
+                {
+                  "url": "https://www.youtube.com/watch?v=9aEzzDMMTFE",
+                  "text": "¡TOUR VIRTUAL POR TELDE! BASÍLICA DE SAN JUAN BAUTISTA." 
                 }
               ]
             },
@@ -107,7 +125,8 @@ export class ApiService {
                   "url": "telde_2.jpg",
                   "description": "Cuatro Puertas"
                 }
-              ]
+              ],
+              "vrs": []
             },
             {
               "question": "The San Francisco neighborhood is characterized by low houses with gable roofs and long whitewashed walls that communicate with each other through streets that are paved in a particular way. In this neighborhood it is possible to visit the Temple of San Francisco, in which the stony altarpieces of Santa Rita de Casia, Santo Domingo de Guzmán and Santa Lucía stand out. How many towers has the temple of San Francisco?",
@@ -118,7 +137,8 @@ export class ApiService {
                   "url": "telde_3.jpg",
                   "description": "The temple of San Francisco"
                 }
-              ]
+              ],
+              "vrs": []
             }
           ]
         }
