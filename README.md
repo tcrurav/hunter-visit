@@ -13,7 +13,25 @@ Install a full ionic develop environment. And after that:
 
 * Download this project repo.
 
-* In order to get Google maps working you have to put your Google Maps API Key in all places marked with (PUT YOUR GoogleMaps API Key HERE). Here is the list of files:
+```
+git clone https://github.com/tcrurav/hunter-visit.git
+```
+
+* Install dependencies and lauch the App locally:
+
+```
+cd hunter-visit
+npm install
+ionic serve -l
+```
+
+Enjoy!
+
+***IMPORTANT: Google maps, Virtual Reality and PWA functionality are not going to work unless you add a Google maps API key, and you deploy the project in a https server. Follow next sections to get all that done.***
+
+## Remarkable points regarding Google maps
+
+In order to get Google maps working you have to put your Google Maps API Key in all places marked with (PUT YOUR GoogleMaps API Key HERE). Here is the list of files:
 
 ```
 src/environments/environment.prod.ts
@@ -22,15 +40,7 @@ package.json
 config.xml
 ```
 
-* Install dependencies:
-
-```
-npm install
-```
-
-* Follow the steps of the next section "Remarkable points regarding PWA with Ionic 4 and uploading to firebase" to deploy the project as a PWA in firebase.
-
-Enjoy!
+***IMPORTANT: In package.json put your API Key only in (PUT YOUR GoogleMaps API Key HERE) and not in (YOUR_API_KEY_IS_HERE)***
 
 ## Remarkable points regarding PWA with Ionic 4 and uploading to firebase
 
@@ -52,9 +62,34 @@ npm run buildwww
 
 ```
 npm install -g firebase-tools
+```
+
+Initilize your firebase project answering the questions the following way:
+
+```
 firebase init
+? Are you ready to proceed? Yes
+? Which Firebase CLI features do you want to set up for this folder? Press Space to select features, then Enter to confirm your choices.
+ ( ) Database: Deploy Firebase Realtime Database Rules
+ ( ) Firestore: Deploy rules and create indexes for Firestore
+ ( ) Functions: Configure and deploy Cloud Functions
+>(*) Hosting: Configure and deploy Firebase Hosting sites
+ ( ) Storage: Deploy Cloud Storage security rules
+ ( ) Emulators: Set up local emulators for Firebase features
+ ? What do you want to use as your public directory? docs
+ ? Configure as a single-page app (rewrite all urls to /index.html)? (y/N) n
+ ? File docs/index.html already exists. Overwrite? (y/N) n
+```
+
+And now deploy your proyect:
+
+```
 firebase deploy
 ```
+
+The execution of the above command returns the Hosting URL that you can try in your favorite mobile browser. (It's only ready for the mobile resolution right now)
+
+Enjoy!
 
 ## Remarkable points regarding A-Frame framework
 
@@ -86,8 +121,8 @@ import { ...CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 * Google maps
 * Images
-* Videos (Not implemented yet)
-* Audios (Not implemented yet)
+* Videos <sub><sup>(Not implemented yet)</sup></sub>
+* Audios <sub><sup>(Not implemented yet)</sup></sub>
 * Virtual Reality (A-Frame) 
 
 ### Prerequisites
