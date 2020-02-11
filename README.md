@@ -1,6 +1,6 @@
 # Hunter Visit
 
-In march 2020 during 3 weeks about 10 students from Aalborg Techcollege (https://techcollege.dk/) and 20 students from IES El Rincón (http://www.ieselrincon.es) develop together an App in Gran Canaria.
+In march 2020 during 3 weeks about 10 students from Aalborg Techcollege (https://techcollege.dk/) and 14 students from IES El Rincón (http://www.ieselrincon.es) develop together an App in Gran Canaria.
 
 This repo is just a draft project developped by the teachers envolved in the project to explore possibilities and forsee problems students could get stuck with.
 
