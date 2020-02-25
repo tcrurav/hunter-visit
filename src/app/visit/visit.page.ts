@@ -24,16 +24,14 @@ export class VisitPage implements OnInit {
 
   ngOnInit() {
     this.visit = this.api.getNowHuntingVisit();
-    // this.route.queryParams.subscribe(params => {
-    //   if (params && params.visit) {
-    //     this.visit = JSON.parse(params.visit);
-    //   }
-    //   // console.log(this.visit);
-    // });
+    console.log(this.visit);
   }
 
   answerTheQuestion(){
-    this.router.navigateByUrl('/geolocation');
+    // UNCOMMENT this to use Google maps instead of Leaflet
+    // this.router.navigateByUrl('/geolocation'); //Google maps version
+    
+    this.router.navigateByUrl('/geolocation-leaflet'); //Leaflet version
   }
 
   launchVR(idStation: number){

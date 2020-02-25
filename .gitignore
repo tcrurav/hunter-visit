@@ -38,4 +38,5 @@ hunter-visit.keystore
 /.firebase
 .firebaserc
 /docs
+# visits-data.json
 # /src/environments/*

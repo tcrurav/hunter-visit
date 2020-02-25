@@ -1,0 +1,20 @@
+#map-canvas {
+    height: 60%;
+    // height: 200px;
+}
+
+.answer-success {
+    color: green;
+    // --border-color: green;
+    // --highlight-color-focused: green;
+}
+
+.answer-fail {
+    color: red;
+    // --border-color: red;
+    // --highlight-color-focused: red;
+}
+
+ion-item {
+    --highlight-color-focused: black;
+}

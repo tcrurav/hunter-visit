@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Visit } from '../models/visit';
-import { Observable, of } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { Observable, of, from} from 'rxjs';
+
+// UNCOMMENT THIS TO USE the Version with data in firebase realtime database
+// import { AngularFireDatabase } from '@angular/fire/database';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +14,10 @@ export class ApiService {
   nowHuntingVisit: number = 0;
   nowHuntingStation: number = 0;
 
-  constructor() { }
+  constructor(
+    // UNCOMMENT THIS TO USE the Version with data in firebase realtime database
+    // private db: AngularFireDatabase
+    ) { }
 
   setVisits(visits: Array<Visit>) {
     this.visits = visits;
@@ -36,7 +41,17 @@ export class ApiService {
 
   getAllVisits(): Observable<Array<Visit>> {
 
-    // In the next version it should be a call to firebase or whatever other Api implementation
+    // UNCOMMENT THIS TO USE the Version with data in firebase realtime database
+    // You also have to create the realtime database in Firebase following 2 steps:
+    //    Step 1: import the file visits-data.json to your firebase project
+    //    Step 2: edit /environments/environment.prod.ts and/or environment.ts to include firebase configuration
+
+    // return from(this.db.database.ref().once("value").then(snap => {
+    //   let data = snap.val();
+    //   return data;
+    // }));
+
+    // UNCOMMENT THIS TO USE the Version with data hardcoded
     return of(
       [
         {

@@ -14,9 +14,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { IonicStorageModule } from '@ionic/storage';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
 
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
+
+import { environment } from '../environments/environment';
+
+// UNCOMMENT THIS TO USE the Version with data in firebase realtime database
+// import { AngularFireModule } from '@angular/fire';
+// import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,7 +31,11 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
     IonicModule.forRoot(),
     AppRoutingModule,
     IonicStorageModule.forRoot(),
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+
+    // UNCOMMENT THIS TO USE the Version with data in firebase realtime database
+    //AngularFireModule.initializeApp(environment.firebase),
+    // AngularFireDatabaseModule,
   ],
   providers: [
     StatusBar,

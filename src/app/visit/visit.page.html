@@ -33,7 +33,7 @@
       <ion-card-title>
         <span class="station">Station {{i}}</span>
         <div class="my-cardboard-container">
-          <ion-img (click)="launchVR(i)" class="my-cardboard" *ngIf="station.vrs[0]" src="assets/vr/img/cardboard.png"
+          <ion-img (click)="launchVR(i)" class="my-cardboard" *ngIf="station.vrs.length > 0" src="assets/vr/img/cardboard.png"
             alt="cardboard"></ion-img>
           <span class="flag-icon flag-icon-gb my-flag"></span>
         </div>
