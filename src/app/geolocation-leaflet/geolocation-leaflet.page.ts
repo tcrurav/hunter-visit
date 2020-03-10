@@ -44,13 +44,28 @@ export class GeolocationLeafletPage implements OnInit {
     this.loadMapSetOfPoints();
   }
 
+  // locatePosition() {
+  //   this.map.locate({ setView: true }).on("locationfound", (e: any) => {
+  //     let newMarker = marker([e.latitude, e.longitude], {
+  //       draggable:
+  //         false
+  //     }).addTo(this.map);
+  //     newMarker.bindPopup("You are located here!").openPopup();
+  //   });
+  // }
+
   locatePosition() {
-    this.map.locate({ setView: true }).on("locationfound", (e: any) => {
-      let newMarker = marker([e.latitude, e.longitude], {
-        draggable:
-          false
-      }).addTo(this.map);
-      newMarker.bindPopup("You are located here!").openPopup();
+    this.map.locate({ setView: true, watch: true, maxZoom: 16 }).on("locationfound", (e: any) => {
+      console.log(this.newMarker);
+      if(this.newMarker != undefined){
+        this.newMarker.setLatLng(e.latlng);
+      } else {
+        this.newMarker = marker([e.latitude, e.longitude], {
+          draggable:
+            false
+        }).addTo(this.map);
+      }
+      this.newMarker.bindPopup("You are located here!").openPopup();
     });
   }
 
